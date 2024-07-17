@@ -12,7 +12,10 @@ export const TitleSection: FC<TitleSectionProps> = ({
   theme = "light",
 }) => {
   return (
-    <h1 className={`${styles["title"]} ${styles[`title-${theme}`]}`}>
+    <h1
+      key={title}
+      className={`${styles["title"]} ${styles[`title-${theme}`]}`}
+    >
       <Scene classToggle={styles["title-move-up"]} offset={"-500"}>
         <span>
           {Array.from(title).map((char, index) => (

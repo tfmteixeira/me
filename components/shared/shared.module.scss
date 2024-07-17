@@ -17,7 +17,11 @@
 }
 
 .title {
+  align-self: flex-start;
   font-size: 14vw;
+  @media (min-width: 2000px) {
+    font-size: 29vh;
+  }
   font-weight: 100;
   margin: 0;
   line-height: 0.8;
@@ -29,7 +33,7 @@
   }
 
   &-dark {
-    color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.4);
   }
 
   &-move-up > span {

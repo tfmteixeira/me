@@ -58,6 +58,10 @@ export const AboutMeSection: FC = () => {
               src={"/assets/mail.png"}
               href={"mailto:tiagomaioteixeira@gmail.com"}
             />
+            <SocialIcon
+              src={"/assets/github.png"}
+              href={"https://github.com/tfmteixeira"}
+            />
           </div>
         </div>
 
