@@ -29,78 +29,78 @@ import { TitleSection } from "@/components/shared/title-section.component";
 const SKILLS = [
   {
     name: "React",
-    logo: <FaReact />,
+    logo: <FaReact color="black" />,
   },
   {
     name: "Angular",
-    logo: <FaAngular />,
+    logo: <FaAngular color="black" />,
   },
   {
     name: "VueJS",
-    logo: <FaVuejs />,
+    logo: <FaVuejs color="black" />,
   },
   {
     name: "Typescript",
-    logo: <SiTypescript />,
+    logo: <SiTypescript color="black" />,
   },
   {
     name: "Javascript",
-    logo: <SiJavascript />,
+    logo: <SiJavascript color="black" />,
   },
 
   {
     name: "HTML",
-    logo: <FaHtml5 />,
+    logo: <FaHtml5 color="black" />,
   },
 
   {
     name: "CSS",
-    logo: <SiCsswizardry />,
+    logo: <SiCsswizardry color="black" />,
   },
   {
     name: "SASS",
-    logo: <SiSass />,
+    logo: <SiSass color="black" />,
   },
   {
     name: "Styled Comp",
-    logo: <SiStyledcomponents />,
+    logo: <SiStyledcomponents color="black" />,
   },
   {
     name: "Jest",
-    logo: <SiJest />,
+    logo: <SiJest color="black" />,
   },
   {
     name: "ESLint",
-    logo: <SiEslint />,
+    logo: <SiEslint color="black" />,
   },
   {
     name: "Prettier",
-    logo: <SiPrettier />,
+    logo: <SiPrettier color="black" />,
   },
   {
     name: "Node",
-    logo: <FaNode />,
+    logo: <FaNode color="black" />,
   },
   {
     name: "NextJS",
-    logo: <RiNextjsFill />,
+    logo: <RiNextjsFill color="black" />,
   },
   {
     name: "Webpack",
-    logo: <SiWebpack />,
+    logo: <SiWebpack color="black" />,
   },
   {
     name: "NPM",
-    logo: <FaNpm />,
+    logo: <FaNpm color="black" />,
   },
 
   {
     name: "AWS",
-    logo: <FaAws />,
+    logo: <FaAws color="black" />,
   },
   {
     name: "GIT",
-    logo: <FaGitSquare />,
+    logo: <FaGitSquare color="black" />,
   },
 ];
 
