@@ -20,7 +20,7 @@ const SocialIcon: FC<SocialIconProps> = ({ src, href, target }) => (
 
 export const AboutMeSection: FC = () => {
   return (
-    <div
+    <section
       className={`${sharedStyles["section-container"]} ${sharedStyles["section-container-dark"]}`}
     >
       <TitleSection title="About Me" theme="dark" />
@@ -69,6 +69,6 @@ export const AboutMeSection: FC = () => {
           <img src={"/assets/profile-photo.jpeg"} className={styles["img"]} />
         </div>
       </div>
-    </div>
+    </section>
   );
 };

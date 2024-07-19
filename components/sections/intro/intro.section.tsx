@@ -5,7 +5,7 @@ import sharedStyles from "../../shared/shared.module.scss";
 
 export const IntroSection: FC = () => {
   return (
-    <div
+    <section
       className={`${sharedStyles["section-container"]} ${sharedStyles["section-container-light"]}`}
     >
       <Scene pin>
@@ -30,6 +30,6 @@ export const IntroSection: FC = () => {
         </section>
       </Scene>
       <img src="/assets/memoji-mac.png" className={styles["memoji"]} />
-    </div>
+    </section>
   );
 };

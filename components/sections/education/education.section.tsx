@@ -3,13 +3,16 @@ import { Scene } from "react-scrollmagic";
 import Sequence from "./components/sequence.component";
 import { TitleSection } from "@/components/shared/title-section.component";
 import styles from "./education.module.scss";
+import sharedStyles from "../../shared/shared.module.scss";
 
 export const EducationSection: FC = () => {
   const ref = useRef<HTMLSpanElement>(null);
 
   return (
-    <section className={styles["education-container"]}>
-      <Scene duration="200%" triggerHook="onLeave" pin>
+    <section
+      className={`${sharedStyles["section-container"]} ${sharedStyles["section-container-dark"]}`}
+    >
+      <Scene pin duration="200%" triggerHook="onLeave">
         {(progress: any) => (
           <div className={styles["scroll-wrapper"]}>
             <div className={styles["background-container"]}>

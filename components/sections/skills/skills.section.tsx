@@ -106,7 +106,7 @@ const SKILLS = [
 
 export const SkillsSection: FC = () => {
   return (
-    <div
+    <section
       id="triggerSkills"
       className={`${sharedStyles["section-container"]} ${sharedStyles["section-container-light"]}`}
       style={{ minHeight: 0 }}
@@ -114,6 +114,6 @@ export const SkillsSection: FC = () => {
       <TitleSection title="Skills" theme="light" />
       <HiveNest items={SKILLS} />
       <p className={styles["keep-learning"]}>And keep learning... 📚</p>
-    </div>
+    </section>
   );
 };
