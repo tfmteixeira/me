@@ -99,6 +99,7 @@ export const ProjectsSection: FC = () => {
               <div className={styles["scroll-wrapper-inner"]}>
                 <p
                   style={{
+                    color: "black",
                     top: `${!isTabletOrMobile ? progress * 70 - 2 : -2}vh`,
                   }}
                 >
