@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Scene } from "react-scrollmagic";
 import styles from "./intro.module.scss";
-import sharedStyles from "../../shared/shared.module.scss";
+import sharedStyles from "../../shared/components/shared.module.scss";
 
 export const IntroSection: FC = () => {
   return (

@@ -23,8 +23,8 @@ import {
 } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import styles from "./skills.module.scss";
-import sharedStyles from "../../shared/shared.module.scss";
-import { TitleSection } from "@/components/shared/title-section.component";
+import sharedStyles from "../../shared/components/shared.module.scss";
+import { TitleSection } from "@/components/shared/components/title-section.component";
 
 const SKILLS = [
   {

@@ -1,9 +1,9 @@
 import { FC, useRef } from "react";
 import { Scene } from "react-scrollmagic";
 import Sequence from "./components/sequence.component";
-import { TitleSection } from "@/components/shared/title-section.component";
+import { TitleSection } from "@/components/shared/components/title-section.component";
 import styles from "./education.module.scss";
-import sharedStyles from "../../shared/shared.module.scss";
+import sharedStyles from "../../shared/components/shared.module.scss";
 
 export const EducationSection: FC = () => {
   const ref = useRef<HTMLSpanElement>(null);

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styles from "./about-me.module.scss";
-import sharedStyles from "../../shared/shared.module.scss";
-import { TitleSection } from "../../shared/title-section.component";
+import sharedStyles from "../../shared/components/shared.module.scss";
+import { TitleSection } from "../../shared/components/title-section.component";
 
 interface SocialIconProps {
   src: string;

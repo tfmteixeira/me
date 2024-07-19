@@ -1,0 +1,97 @@
+.project-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem;
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 1s ease;
+  position: absolute;
+  max-width: 40%;
+
+  &.past {
+    box-shadow: none;
+    opacity: 0.65;
+  }
+
+  &.active {
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:nth-child(odd) {
+    align-self: flex-start;
+    left: 5%;
+  }
+
+  &:nth-child(even) {
+    align-self: flex-end;
+    right: 5%;
+  }
+
+  &:nth-of-type(4n-2) {
+    left: 7%;
+  }
+
+  &:nth-of-type(4n-1) {
+    right: 7%;
+  }
+
+  @media (max-width: 1024px) {
+    background: rgba(255, 255, 255, 0.7);
+    max-width: 90%;
+    align-self: center;
+    left: 0 !important;
+    right: 0 !important;
+    top: 20% !important;
+    margin: auto;
+    transform: translateY(-50%);
+  }
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+
+  @media (max-height: 824px) and (min-width: 1025px) {
+    font-size: 1rem;
+  }
+}
+
+.project-date,
+.project-description,
+.project-stack {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.project-date {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.project-description {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.project-stack {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.project-company {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.company-logo {
+  height: 24px;
+  object-fit: contain;
+  max-width: 40px;
+  margin-left: 8px;
+}
