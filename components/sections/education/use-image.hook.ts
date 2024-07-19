@@ -1,7 +1,7 @@
-import { useState, useEffect, ReactElement } from "react";
-import Image from "next/image";
+import { useState, useEffect } from "react";
+
 interface defaultStateInterface {
-  image: ReactElement | HTMLElement | undefined;
+  image: HTMLElement | undefined;
   status: string;
 }
 const defaultState = {
