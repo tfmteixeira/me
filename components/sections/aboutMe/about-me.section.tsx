@@ -46,7 +46,7 @@ export const AboutMeSection: FC = () => {
           <div className={styles["social-icons-container"]}>
             <SocialIcon
               src={"/assets/linkedin.png"}
-              href={"https://www.linkedin.com/in/tteixeira296"}
+              href={"https://www.linkedin.com/in/tfmteixeira"}
               target="_blank"
             />
             <SocialIcon

@@ -5,6 +5,7 @@ import { Controller } from "react-scrollmagic";
 import { IntroSection } from "../components/sections/intro";
 import { AboutMeSection } from "../components/sections/aboutMe";
 import { SkillsSection } from "../components/sections/skills";
+import { EducationSection } from "@/components/sections/education";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <IntroSection />
         <AboutMeSection />
         <SkillsSection />
+        <EducationSection />
       </Controller>
     </div>
   );
