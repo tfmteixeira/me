@@ -1,6 +1,6 @@
 # Me - repository
 
-Welcome to the repository of my website! This repository contains the complete codebase for my website, which you can visit [here](https://me-two-gold.vercel.app/).
+Welcome to the repository of my website! This repository contains the complete codebase for my website, which you can visit [here](https://me-tiagoteixeira.dev/).
 
 Feel free to explore the code and see how everything is put together. There's plenty to discover whether you're interested in the frontend code or overall project structure.
 
