@@ -64,7 +64,6 @@ const PROJECTS = [
 
 export const ProjectsSection: FC = () => {
   const [isClient, setIsClient] = useState(false);
-  const [animationProgress, setAnimationProgress] = useState(0);
   const isTabletOrMobile = useIsMinWidth(1024);
   const lottieRef = useRef<LottieRefCurrentProps>(null);
 
@@ -72,18 +71,13 @@ export const ProjectsSection: FC = () => {
     setIsClient(true);
   }, []);
 
-  useEffect(() => {
+  const handleAnimationProgress = (progress: number) => {
     if (lottieRef.current) {
-      console.log("lottieRef.current :", lottieRef.current);
       const frame =
         // @ts-ignore
-        animationProgress * lottieRef.current.animationItem?.totalFrames || 0;
+        progress * lottieRef.current.animationItem?.totalFrames;
       lottieRef.current.goToAndStop(frame, true);
     }
-  }, [animationProgress]);
-
-  const handleAnimationProgress = (progress: number) => {
-    setAnimationProgress(progress);
   };
 
   return (
