@@ -14,8 +14,9 @@ const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 const PROJECTS = [
   {
     title: "Curricular Internship",
-    description: "Curricular Internship of master's degree",
-    stack: "Vue.js, TypeScript/Javascript, GIT, Docker",
+    description:
+      "As part of my master's degree, I developed a POC for a project aimed at analyzing mobile network data.",
+    stack: "Javascript, CSS, Leaflet, Java, Python, GeoServer",
     startDate: "2017-09",
     endDate: "2018-07",
     companyName: "Siemens",
@@ -24,8 +25,8 @@ const PROJECTS = [
   {
     title: "Vodafone TV",
     description:
-      "Develop web apps for TV box. Integrated in a cross-functional team",
-    stack: "Vue.js, TypeScript/Javascript, GIT, Docker",
+      "Developed web apps for TV box. Integrated in a cross-functional team",
+    stack: "Vue.js, TypeScript, Javascript, Sass, Docker, GIT",
     startDate: "2018-08",
     endDate: "2019-09",
     companyName: "Wit Software",
@@ -35,7 +36,7 @@ const PROJECTS = [
     title: "Internal Management System",
     description:
       "System to manage the company's financial and resources processes. Integrated in a cross-functional team.",
-    stack: "Angular, Typescript, Java, Springboot, Springdata, MongoDB",
+    stack: "Angular, Typescript, Sass, Java, Springboot, MongoDB, GIT",
     startDate: "2019-09",
     endDate: "2020-10",
     companyName: "Wit Software",
@@ -45,7 +46,7 @@ const PROJECTS = [
     title: "M-Pesa",
     description:
       "Develop the backoffice interface for a versatile financial platform targeting African markets. Cross-functional team using an Agile SAFE methodology.",
-    stack: "React, Typescript, GIT, Jenkins, JIRA",
+    stack: "React, Typescript, Styled Components, Storybook, Jenkins, GIT",
     startDate: "2020-10",
     endDate: "2022-04",
     companyName: "Wit Software",
@@ -55,7 +56,7 @@ const PROJECTS = [
     title: "Carlshop+",
     description:
       "Develop a B2B e-commerce platform for local beer sellers, collaborating as one of three frontend developers in an Agile SCRUM team.",
-    stack: "React, Typescript, Jest, GIT, JIRA",
+    stack: "React, Typescript, Sass, Jest, NextJS, AWS, GIT",
     startDate: "2022-04",
     companyName: "Carlsberg Group",
     companyLogo: "/assets/carlsberg.png",
