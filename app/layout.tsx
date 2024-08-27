@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://www.me-tiagoteixeira.dev/",
     images: [
       {
-        url: "https://www.me-tiagoteixeira.dev/og-image.png",
+        url: "https://www.me-tiagoteixeira.dev/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Tiago Teixeira",
