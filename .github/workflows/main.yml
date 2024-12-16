@@ -1,12 +1,15 @@
-name: CI with Manual Approval
+name: Deployment Pipeline
 
 on:
   push:
     branches:
       - main
 
+permissions:
+  issues: write  # Required for creating and managing the approval issue.
+
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -15,22 +18,23 @@ jobs:
       - name: Run Tests
         run: echo "Running tests..."
 
-  wait-for-approval:
+  manual-approval:
     runs-on: ubuntu-latest
-    needs: build-and-test
+    needs: build
     steps:
       - name: Wait for Manual Approval
         uses: trstringer/manual-approval@v1
         with:
-          approvers: "tfmteixeira" # Replace with valid GitHub usernames
+          secret: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token to authenticate.
+          approvers: user1,user2  # Replace with actual GitHub usernames or organization team names.
           minimum-approvals: 1
-          timeout-minutes: 60 # Optional: Automatically fail after timeout
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          issue-title: "Approval Required for Deployment"
+          issue-body: |
+            Deployment is pending approval. Please review the changes and approve or deny.
 
-  deploy-production:
+  deploy:
     runs-on: ubuntu-latest
-    needs: wait-for-approval
+    needs: manual-approval
     steps:
       - name: Deploy to Production
-        run: echo "Deploying to production environment..."
+        run: echo "Deploying application to production..."
