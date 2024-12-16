@@ -26,7 +26,7 @@ jobs:
         uses: trstringer/manual-approval@v1
         with:
           secret: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token to authenticate.
-          approvers: user1,user2  # Replace with actual GitHub usernames or organization team names.
+          approvers: tfmteixeira  # Replace with actual GitHub usernames or organization team names.
           minimum-approvals: 1
           issue-title: "Approval Required for Deployment"
           issue-body: |
