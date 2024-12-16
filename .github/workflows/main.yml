@@ -1,12 +1,11 @@
-name: Deployment Pipeline
+name: Deploy to Production
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:  # Manually trigger the workflow.
 
 permissions:
-  issues: write  # Required for creating and managing the approval issue.
+  id-token: write  # Required for accessing environments.
+  contents: read  # Standard permissions for accessing repo content.
 
 jobs:
   build:
@@ -18,23 +17,12 @@ jobs:
       - name: Run Tests
         run: echo "Running tests..."
 
-  manual-approval:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Wait for Manual Approval
-        uses: trstringer/manual-approval@v1
-        with:
-          secret: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token to authenticate.
-          approvers: tfmteixeira  # Replace with actual GitHub usernames or organization team names.
-          minimum-approvals: 1
-          issue-title: "Approval Required for Deployment"
-          issue-body: |
-            Deployment is pending approval. Please review the changes and approve or deny.
-
   deploy:
     runs-on: ubuntu-latest
-    needs: manual-approval
+    needs: build
+    environment:
+      name: Production  # Matches the environment name configured in GitHub settings.
+      url: https://your-production-url.com  # Optional, sets an environment-specific URL.
     steps:
       - name: Deploy to Production
-        run: echo "Deploying application to production..."
+        run: echo "Deploying to Production..."
