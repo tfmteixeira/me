@@ -1,4 +1,4 @@
-name: Deploy with Approval
+name: CI with Manual Approval
 
 on:
   push:
@@ -6,24 +6,30 @@ on:
       - main
 
 jobs:
-  deploy-staging:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to Staging
-        run: echo "Deploying to staging..."
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-  approval:
+      - name: Run Tests
+        run: echo "Running tests..."
+
+  wait-for-approval:
     runs-on: ubuntu-latest
-    environment:
-      name: production
-      url: https://example.com/review
+    needs: build-and-test
     steps:
-      - name: Await Approval
-        run: echo "Waiting for approval to deploy to production..."
+      - name: Wait for Manual Approval
+        uses: trstringer/manual-approval@v1
+        with:
+          # Customize the message shown in the approval step
+          prompt: "Do you approve deployment to production?"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   deploy-production:
     runs-on: ubuntu-latest
-    needs: approval
+    needs: wait-for-approval
     steps:
       - name: Deploy to Production
         run: echo "Deploying to production environment..."
