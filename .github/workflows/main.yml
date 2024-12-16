@@ -22,7 +22,6 @@ jobs:
     needs: build
     environment:
       name: Production  # Matches the environment name configured in GitHub settings.
-      url: https://your-production-url.com  # Optional, sets an environment-specific URL.
     steps:
       - name: Deploy to Production
         run: echo "Deploying to Production..."
