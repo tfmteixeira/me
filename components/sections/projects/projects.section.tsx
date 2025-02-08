@@ -58,8 +58,18 @@ const PROJECTS = [
       "Develop a B2B e-commerce platform for local beer sellers, collaborating as one of three frontend developers in an Agile SCRUM team.",
     stack: "React, Typescript, Sass, Jest, NextJS, AWS, GIT",
     startDate: "2022-04",
+    endDate: "2024-11",
     companyName: "Carlsberg Group",
     companyLogo: "/assets/carlsberg.png",
+  },
+  {
+    title: "BioSites - Squarespace",
+    description:
+      "Develop one page website where you can bring together all of your social media profiles, and link to your content, socials, stores, services, blogs, newsletters, videos, music, and more... collaborating as one of four frontend developers in an Agile SCRUM team.",
+    stack: "React, Typescript, Less, Jest, SSR, Google Cloud, GIT",
+    startDate: "2024-11",
+    companyName: "Squarespace",
+    companyLogo: "/assets/squarespace.png",
   },
 ];
 
